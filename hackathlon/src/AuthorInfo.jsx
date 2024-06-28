@@ -48,10 +48,13 @@ const AuthorInfo = ({ username }) => {
 
   return (
     <div>
-      <h1>{authorInfo.name}</h1> {/* Display the author's name */}
-      <p>{authorInfo.bio}</p> {/* Display the author's bio */}
-      <p>Total Likes: {authorInfo.total_likes}</p> {/* Display the total likes */}
-      <p>Total Downloads: {authorInfo.downloads}</p> {/* Display the total downloads */}
+      <div className="author-header">
+        <h1>{authorInfo.name}</h1> {/* Display the author's name */}
+        <p>{authorInfo.bio}</p> {/* Display the author's bio */}
+        <p>Total Likes: {authorInfo.total_likes}</p> {/* Display the total likes */}
+        <p>Total Downloads: {authorInfo.downloads}</p> {/* Display the total downloads */}
+        <a href={authorInfo.portfolio_url} target="_blank" rel="noopener noreferrer">Portfolio</a>
+      </div>
       <div className="gallery">
         {/* Map over the author's photos and render each one */}
         {authorPhotos.map(photo => (
